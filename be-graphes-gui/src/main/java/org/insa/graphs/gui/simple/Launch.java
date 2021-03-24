@@ -19,6 +19,8 @@ import org.insa.graphs.model.io.PathReader;
 
 public class Launch {
 
+	//Paul Gervais 23/03
+	
     /**
      * Create a new Drawing inside a JFrame an return it.
      * 
@@ -45,7 +47,7 @@ public class Launch {
 
     public static void main(String[] args) throws Exception {
 
-        System.out.print("Paul Gervais 23/03");
+       
     	
     	// Visit these directory to see the list of available files on Commetud.
         final String mapName = "/home/commetud/3eme Annee MIC/Graphes-et-Algorithmes/Maps/insa.mapgr";

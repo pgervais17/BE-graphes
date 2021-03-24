@@ -213,7 +213,8 @@ public class Path {
      * @deprecated Need to be implemented.
      */
     public float getLength() {
-        // TODO:
+        float length;
+        
         return 0;
     }
 

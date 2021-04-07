@@ -10,6 +10,10 @@ public class DijkstraAlgorithm extends ShortestPathAlgorithm {
     protected ShortestPathSolution doRun() {
         final ShortestPathData data = getInputData();
         ShortestPathSolution solution = null;
+        BinaryHeap <Label> labels = new BinaryHeap <Label>();
+        HashMap <Node, Label> hashes = new HashMap <Node, Label> ();
+        
+        
         // TODO:
         return solution;
     }

@@ -6,6 +6,7 @@ public class Label implements Comparable <Label> {
 	protected boolean marque;
 	protected double cout;
 	private Arc pere;
+	private boolean dansTas; 
 	
 	@Override
 	public int compareTo(Label other) {
@@ -14,28 +15,47 @@ public class Label implements Comparable <Label> {
 	
 	public Label (Node sommet) {
 		this.sommet_courant= sommet;
+		this.marque=false;
 		this.cout=1.0/0.0;
 		this.pere=null;
+		this.dansTas= false;
 	}
 	
-	private double getCost() {
-		return this.cout;
+	public Node getSommet() {
+		return this.sommet_courant;
 	}
 	
-	private boolean getMarque() {
+	public boolean getMarque() {
 		return this.marque;
 	}
 	
-	private void setMarque(boolean marque){
+	public double getCost() {
+		return this.cout;
+	}
+	
+	public Arc getPere() {
+		return this.pere;
+	}
+	
+	public boolean getDansTas() {
+		return this.dansTas;
+	}
+	
+	public void setMarque(boolean marque){
 		this.marque=marque;
 	}
 	
-	private void setArc (Arc pere) {
+	
+	public void setCost (double cout) {
+		this.cout=cout;
+	}
+	
+	public void setPere (Arc pere) {
 		this.pere=pere;
 	}
 	
-	private void setCout (double cout) {
-		this.cout=cout;
+	public void setDansTas (boolean dansTas) {
+		this.dansTas=dansTas;
 	}
 	
 }

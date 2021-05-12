@@ -10,7 +10,7 @@ public class Label implements Comparable <Label> {
 	
 	@Override
 	public int compareTo(Label other) {
-		return Double.compare(this.cout, other.cout);
+		return Double.compare(this.getTotalCost(), other.cout);
 	}
 	
 	public Label (Node sommet) {
@@ -39,6 +39,10 @@ public class Label implements Comparable <Label> {
 	
 	public boolean getDansTas() {
 		return this.dansTas;
+	}
+	
+	public double getTotalCost() {
+		return this.cout;
 	}
 	
 	public void setMarque(boolean marque){

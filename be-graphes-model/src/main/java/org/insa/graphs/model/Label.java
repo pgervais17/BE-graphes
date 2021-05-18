@@ -10,7 +10,7 @@ public class Label implements Comparable <Label> {
 	
 	@Override
 	public int compareTo(Label other) {
-		return Double.compare(this.getTotalCost(), other.cout);
+		return Double.compare(this.getTotalCost(), other.getTotalCost());
 	}
 	
 	public Label (Node sommet) {

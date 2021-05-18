@@ -5,7 +5,7 @@ public class LabelStar extends Label implements Comparable <Label>{
 	
 	public LabelStar(Node sommet) {
 		super(sommet);
-		this.cout_estime=0.0;		
+		this.cout_estime=(float)(1.0/0.0);		
 	}
 
 	public double getCoutEstime() {

@@ -18,10 +18,10 @@ public class DijkstraAlgorithm extends ShortestPathAlgorithm {
 
     public DijkstraAlgorithm(ShortestPathData data) {
         super(data);
-        this.nbSommetsVisites=0;
+        //this.nbSommetsVisites=0;
     }
     
-    protected Label CreateLabel (Node node) {
+    protected Label createLabel (Node node, ShortestPathData data) {
     	return new Label(node);
     }
     @Override
@@ -36,7 +36,7 @@ public class DijkstraAlgorithm extends ShortestPathAlgorithm {
         BinaryHeap <Label> tas = new BinaryHeap <Label>();
         
         for (Node node : g.getNodes()) {
-        	labels.add(node.getId(), CreateLabel(node)); //liste de label contenant tous les noeuds accessible par leur id
+        	labels.add(node.getId(), createLabel(node,data)); //liste de label contenant tous les noeuds accessible par leur id
         }
         
         Label Origin = labels.get(data.getOrigin().getId());
@@ -45,10 +45,11 @@ public class DijkstraAlgorithm extends ShortestPathAlgorithm {
         Origin.setCost(0);
         tas.insert(Origin);
         Origin.setDansTas(true);
+        
         notifyOriginProcessed(Origin.getSommet());
         
         Label x = null; //label actuel
-        Label y = null; //successeur
+        Label y = null; //label du successeur
         
         /*tant qu'il y a des sommets non marqués*/
         while (!tas.isEmpty() && !fin) {
@@ -66,8 +67,8 @@ public class DijkstraAlgorithm extends ShortestPathAlgorithm {
         		y=labels.get(successeur.getDestination().getId());
         		
         		//if (y == null) {
-        			notifyNodeReached(successeur.getDestination());
-        			this.nbSommetsVisites++;
+        		notifyNodeReached(y.getSommet());
+        		this.nbSommetsVisites++;
         			/*y = newLabel(successeur.getDestination(), data);
         			labels.add(successeur.getDestination().getId(),y);		
         		}*/

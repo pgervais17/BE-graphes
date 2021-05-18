@@ -51,9 +51,9 @@ public class Launch {
        
     	
     	// Visit these directory to see the list of available files on Commetud.
-        final String mapName = "/home/commetud/3eme Annee MIC/Graphes-et-Algorithmes/Maps/insa.mapgr";
-        final String pathName = "/home/commetud/3eme Annee MIC/Graphes-et-Algorithmes/Paths/path_fr31insa_rangueil_r2.path";
-
+        final String mapName = "C:\\Users\\pgerv\\Desktop\\Données persos\\INSA\\3A-4A\\3A\\Graphes\\Maps\\insa.mapgr";
+        final String pathName = "C:\\Users\\pgerv\\Desktop\\Données persos\\INSA\\3A-4A\\3A\\Graphes\\Maps\\path_fr31insa_rangueil_r2.path";
+        
         // Create a graph reader.
         final GraphReader reader = new BinaryGraphReader(
                 new DataInputStream(new BufferedInputStream(new FileInputStream(mapName))));

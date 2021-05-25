@@ -1,4 +1,4 @@
-package org.insa.graphs.algorithm.utils;
+package org.insa.graphs.algorithm.test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

@@ -1,4 +1,4 @@
-package org.insa.graphs.algorithm.utils;
+package org.insa.graphs.algorithm.test;
 
 
 

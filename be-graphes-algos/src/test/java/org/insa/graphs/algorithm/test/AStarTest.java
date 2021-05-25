@@ -1,17 +1,12 @@
-package org.insa.graphs.algorithm.utils;
+package org.insa.graphs.algorithm.test;
 
-import static org.junit.Assert.assertEquals;
+
 
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.List;
 
-import org.insa.graphs.algorithm.ArcInspector;
-import org.insa.graphs.algorithm.ArcInspectorFactory;
-import org.insa.graphs.algorithm.shortestpath.AStarAlgorithm;
-import org.insa.graphs.algorithm.shortestpath.DijkstraAlgorithm;
-import org.insa.graphs.algorithm.shortestpath.ShortestPathData;
-import org.insa.graphs.algorithm.shortestpath.ShortestPathSolution;
+
+
 import org.insa.graphs.model.Arc;
 import org.insa.graphs.model.Graph;
 import org.insa.graphs.model.Node;

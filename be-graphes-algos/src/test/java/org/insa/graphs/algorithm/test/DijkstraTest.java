@@ -1,4 +1,4 @@
-package org.insa.graphs.algorithm.utils;
+package org.insa.graphs.algorithm.test;
 
 import static org.junit.Assert.assertEquals;
 
@@ -219,7 +219,7 @@ public class DijkstraTest {
 		test.testScenario(mapName, 0,origine,destination);    	
 	}
 
-	//@Test
+	@Test
 	public void testDoScenarioDistanceINSA() throws Exception {
 
 		String mapName = "C:/Users/pgerv/Desktop/Données persos/INSA/3A-4A/3A/Graphes/Maps/insa.mapgr";
@@ -265,7 +265,7 @@ public class DijkstraTest {
 		test.testScenario(mapName, 1,origine,destination);   
 	}
 
-	//@Test
+	@Test
 	public void testDoScenarioTempsINSA() throws Exception {
 
 		String mapName = "C:/Users/pgerv/Desktop/Données persos/INSA/3A-4A/3A/Graphes/Maps/insa.mapgr";
@@ -405,7 +405,7 @@ public class DijkstraTest {
 
 	}
 
-	//@Test
+	@Test
 	public void testDoScenarioMinTempsDistHG() throws Exception {
 
 		String mapName = "C:/Users/pgerv/Desktop/Données persos/INSA/3A-4A/3A/Graphes/Maps/haute-garonne.mapgr";
@@ -451,7 +451,7 @@ public class DijkstraTest {
 		test.testScenarioSansOracle(mapName,origine,destination);   
 	}
 
-	//@Test
+	@Test
 	public void testDoScenarioMinTempsDistCarreDense() throws Exception {
 	
 		String mapName = "C:/Users/pgerv/Desktop/Données persos/INSA/3A-4A/3A/Graphes/Maps/carre-dense.mapgr";
@@ -470,7 +470,7 @@ public class DijkstraTest {
 		test.testScenarioSansOracle(mapName,origine,destination);    
 	}
 	
-	//@Test
+	@Test
 	public void testDoScenarioMinTempsDistBelgique() throws Exception {
 
 		String mapName = "C:/Users/pgerv/Desktop/Données persos/INSA/3A-4A/3A/Graphes/Maps/belgium.mapgr";

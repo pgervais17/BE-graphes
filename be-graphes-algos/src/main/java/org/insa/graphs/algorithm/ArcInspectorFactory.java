@@ -111,6 +111,43 @@ public class ArcInspectorFactory {
             @Override
             public boolean isAllowed(Arc arc) {
                 return arc.getRoadInformation().getAccessRestrictions()
+                        .isAllowedForAny(AccessMode.BICYCLE, EnumSet.complementOf(EnumSet
+                                .of(AccessRestriction.FORBIDDEN, AccessRestriction.PRIVATE)));
+            }
+
+            @Override
+            public double getCost(Arc arc) {
+            	double length = arc.getLength(); 
+            	double r = 1 ; // facteur de risque (on ne différencie pas suivant le type de route)
+            	if (arc.getRoadInformation().getAccessRestrictions().isAllowedForAny(AccessMode
+            	.MOTORCAR, EnumSet.complementOf(EnumSet.of(AccessRestriction.FORBIDDEN,
+            	AccessRestriction.PRIVATE)))) {
+            	
+            	r = arc.getRoadInformation().getMaximumSpeed() ; 
+            	}
+            	return length * r ; 
+            	}
+
+            @Override
+            public int getMaximumSpeed() {
+                return 20; //vitesse moyenne d'un cycliste
+            }
+
+            @Override
+            public Mode getMode() {
+                return Mode.LENGTH; //on a une contrainte de longeur pas de temps (de plus on part du principe qu'on est à vitessse constante)
+            }
+
+            @Override
+            public String toString() {
+                return "Shortest path, maximum of security for bicyle";
+            }
+        });
+
+        filters.add(new ArcInspector() {
+            @Override
+            public boolean isAllowed(Arc arc) {
+                return arc.getRoadInformation().getAccessRestrictions()
                         .isAllowedForAny(AccessMode.MOTORCAR, EnumSet.complementOf(EnumSet
                                 .of(AccessRestriction.FORBIDDEN, AccessRestriction.PRIVATE)));
             }
